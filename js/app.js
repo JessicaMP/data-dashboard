@@ -74,29 +74,90 @@ function callSede() {
   for (i = 0; i < arrayAlumn20162L.length; i++) {
     if (arrayAlumn20162L[i]['active'] === true) {
       activeStudents++;
+     
+      var sprint = arrayAlumn20162L[i]['sprints'];
+      var sc = 'score',
+        hs = 'hse',
+        tc = 'tech';
+
+      techSprinOne = sprint[0][sc][tc];
+      hseSprinOne = sprint[0][sc][hs];
+      totalS1=techSprinOne+hseSprinOne;
+    
+      techSprintwo = sprint[1][sc][tc];     
+      hseSprintwo = sprint[1][sc][hs];
+      totalS2=techSprintwo+hseSprintwo;
+     
+      
     } if (arrayAlumn20162L[i]['active'] === false) {
       desertStudents++;
-    }
+    } 
   }
+
+
 
   // UTILIZAMOS GOOGLE CHARTS PARA GENERAR GRAFICO INTERACTIVO
   google.charts.load('current', { 'packages': ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
+  google.charts.setOnLoadCallback(drawChartTwo);
+  google.charts.setOnLoadCallback(drawChartTree);
+
+  
+
   function drawChart() {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
     data.addRows([
       ['Activas', activeStudents],
-      ['Desertoras', desertStudents],
+      ['Desertaron', desertStudents],
     ]);
     var options = {
       'title': 'Total de Alumnas :' + totalAlumn,
-      'width': 300,
+      'width': 400,
       'height': 300
     };
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     chart.draw(data, options);
   }
-}
+  //UTILIZAMOS GOOGLE PARA % DE HSE Y TECH
+
+  function drawChartTwo() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Topping');
+    data.addColumn('number', 'Slices');
+    data.addRows([
+      ['Sprint 1 ', totalS1],
+      ['Sprint 2 ', totalS2],
+    ]);
+    var options = {
+      'title': 'Total de Alumnas :' + activeStudents,
+      'width': 400,
+      'height': 300
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div2'));
+    chart.draw(data, options);
+  }
+
+    //UTILIZAMOS GOOGLE PARA NPS
+
+    function drawChartTree() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Slices');
+      data.addRows([
+        ['Sprint 1 ', totalS1],
+        ['Sprint 2 ', totalS2],
+      ]);
+      var options = {
+        'title': 'Total de Alumnas :' + activeStudents,
+        'width': 400,
+        'height': 300
+      };
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div3'));
+      chart.draw(data, options);
+    }
+
+
+};
 
