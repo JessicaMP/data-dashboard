@@ -65,9 +65,6 @@ function showAlumn() {
       div.appendChild(divNote);
       var tech = document.createElement('p');
       var sprint = arrayAlumn20162A[i]['sprints'];
-      /*for (var j = 0; i < sprint.length; j++) {
-        sprint[j]
-      }*/
       tech.textContent = 'JAVASCRIPT';
       tech.classList.add('curse');
       divNote.appendChild(tech);
