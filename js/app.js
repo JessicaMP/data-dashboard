@@ -1,7 +1,5 @@
-
-
-
 //CREANDO VARIABLES GLOBALES, INCLUYEN LOS ARRAYS POR SEDE
+
 // Lima
 var lim20162 = document.getElementById('lim-2016-2');
 var lim20171 = document.getElementById('lim-2017-1');
@@ -80,6 +78,7 @@ function callSede() {
       desertStudents++;
     }
   }
+
   // UTILIZAMOS GOOGLE CHARTS PARA GENERAR GRAFICO INTERACTIVO
   google.charts.load('current', { 'packages': ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
@@ -93,14 +92,11 @@ function callSede() {
     ]);
     var options = {
       'title': 'Total de Alumnas :' + totalAlumn,
-      'width': 400,
+      'width': 300,
       'height': 300
     };
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     chart.draw(data, options);
   }
 }
-
-
-
 
