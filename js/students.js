@@ -1,7 +1,7 @@
 var student = document.getElementById('student');
 var container = document.getElementsByClassName('container')[0];
-/* Variables globales por sedes*/
-// Lima
+/*Variables globales por sedes*/
+//Lima
 var arrayAlumn20162L = data.LIM['2016-2']['students'];
 var arrayAlumn20171L = data.LIM['2017-1']['students'];
 var arrayAlumn20172L = data.LIM['2017-2']['students'];
@@ -15,23 +15,23 @@ var arrayAlumn20172S = data.SCL['2017-2']['students'];
 // Mexico df
 var arrayAlumn20171M = data.CDMX['2017-1']['students'];
 var arrayAlumn20172M = data.CDMX['2017-2']['students'];
-// Arequipa
+//Arequipa
 showAlumn4s(arrayAlumn20162A);
 showAlumn3s(arrayAlumn20171A);
-// Lima
+//Lima
 showAlumn2s(arrayAlumn20162L);
 showAlumn4s(arrayAlumn20171L);
 showAlumn2s(arrayAlumn20172L);
-// Santiago
+//Santiago
 showAlumn4s(arrayAlumn20162S);
 showAlumn3s(arrayAlumn20171S);
 showAlumn2s(arrayAlumn20172S);
-// Mexico
+//Mexico
 showAlumn3s(arrayAlumn20171M);
 showAlumn2s(arrayAlumn20172M);
-// student.addEventListener('onclick', showAlumn);
+//student.addEventListener('onclick', showAlumn);
 function showAlumn4s(sede) {
-  // var dataArray = data.AQP["2016-2"]['students'];
+  //var dataArray = data.AQP["2016-2"]['students'];
   for (var i = 0; i < sede.length; i++) {
     if (sede[i]['active'] == true) {
       var div = document.createElement('div');
@@ -71,7 +71,7 @@ function showAlumn4s(sede) {
       jQuery.textContent = 'JQUERY';
       jQuery.classList.add('curse');
       divSmall.appendChild(jQuery);
-      // Notas
+      //Notas
       var divNote = document.createElement('div');
       divNote.classList.add('divNote');
       div.appendChild(divNote);
@@ -90,9 +90,9 @@ function showAlumn4s(sede) {
       techSkill.classList.add('note');
       divNote.appendChild(techSkill);
       var lifeSkill = document.createElement('p');
-      // tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
+      //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
       /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
-            tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
+        tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
       var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs]) + (sprint[2][sc][hs]) + (sprint[3][sc][hs])) / 4;
       lifeSkill.innerHTML = parseInt(hse / 12) + '%';
       lifeSkill.classList.add('note');
@@ -102,10 +102,10 @@ function showAlumn4s(sede) {
       skillH.classList.add('skill');
       skillH.classList.add('skillH');
       divNote.appendChild(skillH);
-      // Ingles
+      //Ingles
       var englishSkill = document.createElement('p');
       englishSkill.textContent = 'INTERM';
-      // englishSkill.classList.add('note');
+      //englishSkill.classList.add('note');
       englishSkill.classList.add('noteM');
       divNote.appendChild(englishSkill);
       var skillE = document.createElement('span');
@@ -113,7 +113,7 @@ function showAlumn4s(sede) {
       skillE.classList.add('skill');
       skillE.classList.add('skillE');
       divNote.appendChild(skillE);
-      // Perfil
+      //Perfil
       var profile = document.createElement('p');
       profile.textContent = 'Ver perfil >';
       profile.classList.add('profile');
@@ -123,7 +123,7 @@ function showAlumn4s(sede) {
 };
 
 function showAlumn3s(sede) {
-  // var dataArray = data.AQP["2016-2"]['students'];
+  //var dataArray = data.AQP["2016-2"]['students'];
   for (var i = 0; i < sede.length; i++) {
     if (sede[i]['active'] == true) {
       var div = document.createElement('div');
@@ -163,7 +163,7 @@ function showAlumn3s(sede) {
       jQuery.textContent = 'JQUERY';
       jQuery.classList.add('curse');
       divSmall.appendChild(jQuery);
-      // Notas
+      //Notas
       var divNote = document.createElement('div');
       divNote.classList.add('divNote');
       div.appendChild(divNote);
@@ -182,9 +182,9 @@ function showAlumn3s(sede) {
       techSkill.classList.add('note');
       divNote.appendChild(techSkill);
       var lifeSkill = document.createElement('p');
-      // tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
+      //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
       /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
-            tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
+        tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
       var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs]) + (sprint[2][sc][hs])) / 3;
       lifeSkill.innerHTML = parseInt(hse / 12) + '%';
       lifeSkill.classList.add('note');
@@ -194,10 +194,10 @@ function showAlumn3s(sede) {
       skillH.classList.add('skill');
       skillH.classList.add('skillH');
       divNote.appendChild(skillH);
-      // Ingles
+      //Ingles
       var englishSkill = document.createElement('p');
       englishSkill.textContent = 'INTERM';
-      // englishSkill.classList.add('note');
+      //englishSkill.classList.add('note');
       englishSkill.classList.add('noteM');
       divNote.appendChild(englishSkill);
       var skillE = document.createElement('span');
@@ -205,7 +205,7 @@ function showAlumn3s(sede) {
       skillE.classList.add('skill');
       skillE.classList.add('skillE');
       divNote.appendChild(skillE);
-      // Perfil
+      //Perfil
       var profile = document.createElement('p');
       profile.textContent = 'Ver perfil >';
       profile.classList.add('profile');
@@ -214,7 +214,7 @@ function showAlumn3s(sede) {
   }
 };
 function showAlumn2s(sede) {
-  // var dataArray = data.AQP["2016-2"]['students'];
+  //var dataArray = data.AQP["2016-2"]['students'];
   for (var i = 0; i < sede.length; i++) {
     if (sede[i]['active'] == true) {
       var div = document.createElement('div');
@@ -254,7 +254,7 @@ function showAlumn2s(sede) {
       jQuery.textContent = 'JQUERY';
       jQuery.classList.add('curse');
       divSmall.appendChild(jQuery);
-      // Notas
+      //Notas
       var divNote = document.createElement('div');
       divNote.classList.add('divNote');
       div.appendChild(divNote);
@@ -273,9 +273,9 @@ function showAlumn2s(sede) {
       techSkill.classList.add('note');
       divNote.appendChild(techSkill);
       var lifeSkill = document.createElement('p');
-      // tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
+      //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
       /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
-            tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
+        tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
       var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs])) / 2;
       lifeSkill.innerHTML = parseInt(hse / 12) + '%';
       lifeSkill.classList.add('note');
@@ -285,10 +285,10 @@ function showAlumn2s(sede) {
       skillH.classList.add('skill');
       skillH.classList.add('skillH');
       divNote.appendChild(skillH);
-      // Ingles
+      //Ingles
       var englishSkill = document.createElement('p');
       englishSkill.textContent = 'INTERM';
-      // englishSkill.classList.add('note');
+      //englishSkill.classList.add('note');
       englishSkill.classList.add('noteM');
       divNote.appendChild(englishSkill);
       var skillE = document.createElement('span');
@@ -296,9 +296,11 @@ function showAlumn2s(sede) {
       skillE.classList.add('skill');
       skillE.classList.add('skillE');
       divNote.appendChild(skillE);
-      // Perfil
+      //Perfil
       var profile = document.createElement('p');
       profile.textContent = 'Ver perfil >';
       profile.classList.add('profile');
       div.appendChild(profile);
-
+    }
+  }
+};
