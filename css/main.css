@@ -202,3 +202,11 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
+
+
+.info{
+  background: #E8DEDC;
+  width: 180px;
+  display: inline-block;
+  margin: 1%;
+}

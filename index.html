@@ -19,43 +19,29 @@
     </header>
     <nav class="nav text-Uppercase">
       <img src="assets/images/l-image.png" alt="">
-          <ul id="countries">
-            <li >
-                Lima
-               <!--<a href="" id="lima"></a>-->
-              <i class="fa fa-sort-desc" aria-hidden="true"></i>
-              <ul class="city hide">
-                <li id="lim-2016-2">2016-II</li>
-                <li id="lim-2017-1">2017-I</li>
-                <li id="lim-2017-2">2017-II</li>
-              </ul>
-            </li>
-            <li>
-               <a href="" id="Arequipa">Arequipa</a>
-              <i class="fa fa-sort-desc" aria-hidden="true"></i>
-              <ul class="city hide">
-                <li id="aqp-2016-2">2016-II</li>
-                <li id="aqp-2017-1">2017-I</li>
-              </ul>
-            </li>
-            <li>
-               <a href="" id="Santiago">Santiago</a>
-              <i class="fa fa-sort-desc" aria-hidden="true"></i>
-              <ul class="city hide">
-                <li id="scl-2016-2">2016-II</li>
-                <li id="scl-2017-1">2017-I</li>
-                <li id="scl-2017-2">2017-II</li>
-              </ul>
-            </li>
-            <li>
-               <a href="" id="MexicoDf">Mexico df</a>
-              <i class="fa fa-sort-desc" aria-hidden="true"></i>
-              <ul class="city hide">
-                <li id="cdmx-2017-1">2017-I</li>
-                <li id="cdmx-2017-2">2017-II</li>
-              </ul>
-            </li>
-          </ul>
+      <select id="select-sede" >
+        <option value="">LIMA</option>
+        <option value="lim-2016-2">2016-2</option>
+        <option value="lim-2017-1">2017-1</option>
+        <option value="lim-2017-2">2017-2</option>
+      </select>
+      <select>
+        <option value="aqp">AREQUIPA</option>
+        <option value="aqp-2016-2">2016-2</option>
+        <option value="aqp-2017-1">2017-2</option>
+      </select>
+      <select>
+        <option value="stg">SANTIGAGO</option>
+        <option value="scl-2016-2">2016-2</option>
+        <option value="scl-2017-1">2017-1</option>
+        <option value="scl-2017-2">2017-2</option>
+      </select>
+      <select>
+        <option value="mdf">MEXICO DF</option>
+        <option value="cdmx-2017-1">2017-1</option>
+        <option value="cdmx-2017-2">2017-2</option>
+      </select>
+
     </nav>
     <span class="position">
       <a href="index.html">GENERAL</a> |
@@ -68,7 +54,7 @@
 
         <div id="chart_div"></div>
         
-      </div>
+      </div>  
 
       <div class="firts two">
         <h2>ACHIEVENT</h2>
@@ -101,15 +87,22 @@
       </div>
 
       <div class="firts seven">
-        <h2>TEACHER RATING</h2>
+        <h2>PROMEDIO GENERAL DE MAESTROS</h2>
+        <span class="info" id="teach">4.2
+          <br> OVERAL TEACHER RATING</span>
+        <figure class="img">
+          <img src="assets/images/graph.png" alt="">
+        </figure>
         <div id="chart_div7"></div>
-        
       </div>
-
       <div class="firts eight">
-        <h2>JEDI MASTER RATING</h2>
+        <h2>PROMEDIO GENERAL DE JEDI</h2>
+        <span class="info" id="jedi">50
+          <br> OVERAL JEDI RANKING</span>
+        <figure class="img">
+          <img src="assets/images/net-promoter-score.png" alt="">
+        </figure>
         <div id="chart_div8"></div>
-        
       </div>
     </section>
 
