@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-
 //CREANDO VARIABLES GLOBALES, INCLUYEN LOS ARRAYS POR SEDE
   // Lima
   var lim20162 = document.getElementById('lim-2016-2');
@@ -87,9 +83,7 @@
         desertStudents++;
       }
       console.log(arrayAlumn20162L[i]['sprints']);
-=======
 // CREANDO VARIABLES GLOBALES, INCLUYEN LOS ARRAYS POR SEDE
->>>>>>> d69c65cc15ce8d73dbcf1f931e41ae0e1cfca5d5
 
 // Lima
 var lim20162 = document.getElementById('lim-2016-2');
@@ -132,12 +126,10 @@ function callSede() {
   for (i = 0; i < arrayAlumn20162L.length; i++) {
     if (arrayAlumn20162L[i]['active'] === true) {
       activeStudents++;
-<<<<<<< HEAD
 
-=======
     } if (arrayAlumn20162L[i]['active'] === false) {
       desertStudents++;
-    } 
+    }
   }
   drawChart();
   drawChartTwo();
@@ -146,11 +138,11 @@ function callSede() {
 
 // Load the Visualization API and the corechart package.
 google.charts.load('current', {'packages': ['corechart']});
-      
+
 // Set a callback to run when the Google Visualization API is loaded.
 google.charts.setOnLoadCallback(drawChart);
 google.charts.setOnLoadCallback(drawChartTwo);
-google.charts.setOnLoadCallback(drawChartTree); 
+google.charts.setOnLoadCallback(drawChartTree);
 // UTILIZAMOS GOOGLE CHARTS PARA GENERAR GRAFICO INTERACTIVO
 
 function drawChart() {
@@ -205,11 +197,10 @@ function drawChartTree() {
   };
   var chart = new google.visualization.PieChart(document.getElementById('chart_div3'));
   chart.draw(data, options);
-}
-callSede();
+};
+//callSede();
 
-/**     
->>>>>>> d69c65cc15ce8d73dbcf1f931e41ae0e1cfca5d5
+/**
       var sprint = arrayAlumn20162L[i]['sprints'];
       var sc = 'score',
         hs = 'hse',
@@ -217,7 +208,6 @@ callSede();
 
       techSprinOne = sprint[0][sc][tc];
       hseSprinOne = sprint[0][sc][hs];
-<<<<<<< HEAD
       totalS1=techSprinOne+hseSprinOne;
 
       techSprintwo = sprint[1][sc][tc];
@@ -300,10 +290,9 @@ callSede();
 
 
 };
-=======
+
       totalS1 = techSprinOne + hseSprinOne;
-    
-      techSprintwo = sprint[1][sc][tc];     
+
+      techSprintwo = sprint[1][sc][tc];
       hseSprintwo = sprint[1][sc][hs];
       totalS2 = techSprintwo + hseSprintwo; */
->>>>>>> d69c65cc15ce8d73dbcf1f931e41ae0e1cfca5d5
